@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('./assets/fonts/BricolageGrotesque_72pt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('./assets/fonts/BricolageGrotesque_72pt-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  /* Apply the font globally */
+  body {
+    font-family: 'CustomFont', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
