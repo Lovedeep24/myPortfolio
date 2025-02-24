@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios';
 import { useState } from 'react';
 import { motion } from "framer-motion";
-// import styles from '../Styles/Contact.module.css'
 export default function Contact() {
   const[name, setName] = useState("");  
   const[email, setEmail] = useState("");
@@ -64,7 +63,6 @@ export default function Contact() {
         <div className="bg-[#0B0B0B] w-full h-auto flex flex-col-reverse sm:flex-row ">
             {/* <div > */}
              <motion.div
-                        //   className="flex flex-col items-start gap-7 self-stretch mt-12 sm:h-[20rem] sm:w-[45%] w-[80%] h-[10rem] rounded-xl overflow-hidden"
                         style={{paddingTop:'6rem', paddingLeft:'4rem',paddingTop: window.innerWidth < 640 ? '1rem' : '6rem', }} className="bg-[#0B0B0B] w-full sm:w-[50%] h-full px-[5rem] pr-[6.75rem] flex flex-col gap-5" 
                           initial="hidden"
                           whileInView="visible"

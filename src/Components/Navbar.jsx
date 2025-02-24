@@ -1,6 +1,4 @@
 import React from 'react'
-import styles from '../styles/navbar.module.css';
-
 export default function Navbar() {
   return (
     <div className="bg-black flex justify-between w-full h-[10vh]">
