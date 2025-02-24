@@ -82,7 +82,7 @@ export default function Contact() {
             {/* </div> */}
             <motion.div
                         //   className="flex flex-col items-start gap-7 self-stretch mt-12 sm:h-[20rem] sm:w-[45%] w-[80%] h-[10rem] rounded-xl overflow-hidden"
-                        style={{paddingTop:'10rem', paddingLeft:'4rem',paddingTop: window.innerWidth < 640 ? '3rem' : '10rem', }} className=" sm:w-[40%] w-full" 
+                        style={{paddingLeft:'4rem',paddingTop: window.innerWidth < 640 ? '3rem' : '10rem', }} className=" sm:w-[40%] w-full" 
                           initial="hidden"
                           whileInView="visible"
                           viewport={{ once: true, amount: 0.2 }}
