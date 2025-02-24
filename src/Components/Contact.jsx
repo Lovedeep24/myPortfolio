@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios';
 import { useState } from 'react';
 import { motion } from "framer-motion";
+import { Toaster, toast } from "sonner";
+
 export default function Contact() {
   const[name, setName] = useState("");  
   const[email, setEmail] = useState("");
@@ -19,11 +21,12 @@ export default function Contact() {
     e.preventDefault();
     if(!email)
     {
-      alert("EMAIL REQUIRED")
+      toast.error("Email Required!",{className: "text-red"})
+      return;
     }
-    if(!subject)
+    else if(!subject)
     {
-        alert("SUBJECT REQUIRED");
+        toast.error("Subject Required!",{className: "text-red"})
     }
     try {
         const response = await axios.post("http://localhost:4000/req", {
@@ -34,7 +37,9 @@ export default function Contact() {
         });
 
         if (response.status === 200) {
-            alert("Request sent successfully");
+            // alert("Request sent successfully");
+            toast.success("Got it Will get back to you shortly",{className: "text-red"})
+            // toast("This is a toast!")
             setDescription("");
             setEmail("");
             setSubject("");
@@ -45,13 +50,10 @@ export default function Contact() {
         if(error.response)
         {
             if (error.response.status === 404) {
-                alert("User not found");
-            } else if (error.response.status === 400) {
-                alert("Invalid password");}
-                else if (error.response.status === 401) {
-                    alert("Not Authorized");
+              toast.error("Something went wrong!",{className: "text-red"})
             } else {
-                alert("All Fields are required");
+                // alert("All Fields are required");
+                toast.error("Something went wrong!",{className: "text-red"})
             }
         }
         
@@ -59,7 +61,7 @@ export default function Contact() {
 };
   return (
     <>
-      
+       <Toaster position='top-center' />
         <div className="bg-[#0B0B0B] w-full h-auto flex flex-col-reverse sm:flex-row ">
             {/* <div > */}
              <motion.div
@@ -97,6 +99,7 @@ export default function Contact() {
                  </div>
             </div>
             </motion.div>
+           
         </div> 
     </>
   )

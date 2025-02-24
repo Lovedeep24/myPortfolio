@@ -7,7 +7,7 @@ const handleClientReq = async (req, res) => {
 
     try {
         if (!name || !email || !subject || !description) {
-            console.log("Validation failed: Missing fields"); // Log missing fields
+            // console.log("Validation failed: Missing fields"); 
             return res.status(400).json({ message: "All fields are mandatory" });
         }
 
