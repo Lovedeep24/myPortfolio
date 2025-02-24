@@ -12,7 +12,7 @@ export default function Body1() {
   return (
     <>
      <div className="w-full bg-black h-auto sm:px-6 lg:px-8">
-        <div className="flex flex-col justify-centre items-center border-2 border-solid bg-black sm:p-10">
+        <div className="flex flex-col justify-centre items-center bg-black sm:p-10">
             <div className=" overflow-hidden mx-auto h-58 w-60 sm:w-48 sm:h-48 lg:w-60 lg:h-60 flex justify-center items-center mt-2  rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,_#FFF_10%,_rgba(67,_67,_67,_0.00)_100%)]">
                 <div className="p-4 h-50 w-50">
                      <img src={portfilioImg} alt="portfolio" className="w-full h-full object-contain"/>

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import styles from '../Styles/skills.module.css';
 import html from '../assets/HTML5.png';
-import css from '../assets/Css.png';
+import css from '../assets/css.png';
 import js from '../assets/javascript.png';
 import react from '../assets/React.png';
 import node from '../assets/nodejs.png';
@@ -37,7 +37,7 @@ export default function Skills() {
             My <span> Skills</span>
           </p>
         </div>
-        <div style={{marginLeft: '100px', marginTop:'100px',marginLeft: window.innerWidth < 640 ? '40px' : '100px',}} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 border-amber-500">
+        <div style={{ marginTop:'100px',marginLeft: window.innerWidth < 640 ? '40px' : '100px',}} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 border-amber-500">
           {skills.map((skill) => {
             return (
               <motion.div
