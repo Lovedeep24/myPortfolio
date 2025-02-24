@@ -63,7 +63,7 @@ export default function Contact() {
         <div className="bg-[#0B0B0B] w-full h-auto flex flex-col-reverse sm:flex-row ">
             {/* <div > */}
              <motion.div
-                        style={{paddingTop:'6rem', paddingLeft:'4rem',paddingTop: window.innerWidth < 640 ? '1rem' : '6rem', }} className="bg-[#0B0B0B] w-full sm:w-[50%] h-full px-[5rem] pr-[6.75rem] flex flex-col gap-5" 
+                        style={{ paddingLeft:'4rem',paddingTop: window.innerWidth < 640 ? '1rem' : '6rem', }} className="bg-[#0B0B0B] w-full sm:w-[50%] h-full px-[5rem] pr-[6.75rem] flex flex-col gap-5" 
                           initial="hidden"
                           whileInView="visible"
                           viewport={{ once: true, amount: 0.2 }}
