@@ -6,6 +6,9 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),
     tailwindcss(),],
+    optimizeDeps: {
+      include: ["framer-motion", "sonner"], // Ensure they are properly bundled
+    },
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),

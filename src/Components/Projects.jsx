@@ -6,7 +6,7 @@ import Proj1 from '../assets/proj1.jpg';
 import myways from '../assets/myways.png';
 import adventurush from '../assets/adventurush.png';
 import mcq from '../assets/mcq.png';
-import logo from '../assets/logo.png';
+import logo from '../assets/Logo.png';
 export default function Projects() {
   const slideInLeft = {
     hidden: { opacity: 0, x: -100 },
