@@ -24,8 +24,8 @@ const skills = [
   { id: "10", name: 'C++', icon: C },
 ];
 const slideInFromBottomVariant = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, y: 90 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
 };
 export default function Skills() {
   return (
@@ -33,11 +33,11 @@ export default function Skills() {
       <div className="bg-[#131313] w-full h-auto">
         <div className="ml-12 pt-8 flex h-16 w-[18%]">
           <hr style={{marginTop:'40px',marginLeft:'20px'}} className="inline-block bg-white w-[0.125rem] h-[3.1875rem] rotate-180 flex-shrink-0"/>
-          <p style={{marginTop:'50px', marginLeft:'10px'}} className=" text-white w-full text-center  text-3xl font-mediumcapitalize">
-            My <span>Skills</span>
+          <p style={{marginTop:'50px', marginLeft:'10px'}} className=" text-white flex w-full text-center gap-1 text-3xl font-mediumcapitalize">
+            My <span> Skills</span>
           </p>
         </div>
-        <div style={{marginLeft: '100px', marginTop:'100px'}} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 border-amber-500">
+        <div style={{marginLeft: '100px', marginTop:'100px',marginLeft: window.innerWidth < 640 ? '40px' : '100px',}} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 border-amber-500">
           {skills.map((skill) => {
             return (
               <motion.div
