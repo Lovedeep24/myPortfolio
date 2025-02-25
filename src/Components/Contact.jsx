@@ -21,13 +21,14 @@ export default function Contact() {
     e.preventDefault();
     if(!email)
     {
-      toast.error("Email Required!",{className: "text-red"})
+      toast.error("Email Required!")
       return;
     }
     else if(!subject)
     {
-        toast.error("Subject Required!",{className: "text-red"})
+        toast.error("Subject Required!")
     }
+    else{
     try {
         const response = await axios.post("http://localhost:4000/req", {
             email,
@@ -45,7 +46,8 @@ export default function Contact() {
             setSubject("");
             setName("");
         }
-    } catch (error) {
+    }
+    catch (error) {
         console.log("Error:", error);
         if(error.response)
         {
@@ -58,6 +60,7 @@ export default function Contact() {
         }
         
     }
+  }
 };
   return (
     <>
@@ -73,8 +76,8 @@ export default function Contact() {
               >
                     <form  onSubmit={handleSubmit} className='flex flex-col gap-5' >
                     <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem]  items-center rounded-[1.25rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem] "placeholder="Your name" />
-                    <input value={email} onChange={(e) => setEmail(e.target.value)} type="email"  className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem] items-center rounded-[1.25rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem]" placeholder="Email" />
-                    <input value={subject} onChange={(e) => setSubject(e.target.value)} type="text" className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem] items-center rounded-[1.25rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem]" placeholder="Subject" />
+                    <input value={email} onChange={(e) => setEmail(e.target.value)} type="email"  className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem] items-center rounded-[1.25rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem]" placeholder="Email*" />
+                    <input value={subject} onChange={(e) => setSubject(e.target.value)} type="text" className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem] items-center rounded-[1.25rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem]" placeholder="Subject*" />
                     <textarea value={description} onChange={(e) => setDescription(e.target.value)} type="text" maxLength={200}  className="bg-[#0B0B0B] pt-3 pl-5 flex sm:w-[100%] w-[90%] h-[6rem] sm:h-[8.5rem] rounded-[1.25rem] border-1 border-white text-[#9B9B9B] text-base font-normal text-start"placeholder="How can i Help?" />
                     <button type='submit' className="w-[40%] sm:w-[100%] h-[2.5rem] text-white font-bold flex-shrink-0 rounded-[3.125rem] bg-[#0B0B0B] border-1 border-white hover:text-black hover:bg-white">Send</button>
                     </form>
