@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import styles from '../Styles/skills.module.css';
 import html from '../assets/HTML5.png';
 import css from '../assets/css.png';
 import js from '../assets/javascript.png';
@@ -32,9 +31,9 @@ export default function Skills() {
     <>
       <div className="bg-[#131313] w-full h-auto">
         <div className="ml-12 pt-8 flex h-16 w-[18%]">
-          <hr style={{marginTop:'40px',marginLeft:'20px'}} className="inline-block bg-white w-[0.125rem] h-[3.1875rem] rotate-180 flex-shrink-0"/>
-          <p style={{marginTop:'50px', marginLeft:'10px'}} className=" text-white flex w-full text-center gap-1 text-3xl font-mediumcapitalize">
-            My <span> Skills</span>
+          <hr className="inline-block bg-white w-[0.125rem] mt-4 h-[3.1875rem] rotate-180 flex-shrink-0"/>
+          <p className=" text-white flex w-full text-center ml-2 mt-1 gap-1 text-[3rem]  font-mediumcapitalize">
+            My <span className="text-[#4061F7] text-[3rem] font-extrabold "> Skills</span>
           </p>
         </div>
         <div style={{ marginTop:'100px',marginLeft: window.innerWidth < 640 ? '40px' : '100px',}} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 border-amber-500">
@@ -49,8 +48,8 @@ export default function Skills() {
                 viewport={{ once: true, amount: 0.2 }}
               >
                 <div  className="group w-[8rem] h-[9rem] sm:w-[18rem] sm:h-[10rem]  p-6 flex flex-col justify-center items-center gap-8 rounded-xl bg-white relative overflow-hidden transition-all duration-500 hover:scale-105">
-                <img src={skill.icon} alt="skill"  className= "ml-[25%] h-[45%] w-[40%] sm:h-[35%] sm:w[20%] transition-transform duration-500" />
-                <p className="mt-[20%] text-black text-center text-xl font-semibold transition-colors duration-300 tracking-tight capitalize ">{skill.name}</p>
+                <img src={skill.icon} alt="skill"  className= " h-[45%] w-[80%] sm:h-[55%] sm:w[20%] transition-transform duration-500" />
+                <p className=" text-black text-center text-xl font-semibold transition-colors duration-300 tracking-tight capitalize ">{skill.name}</p>
                 </div> 
               </motion.div>
             );

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import styles from '../Styles/project.module.css';
 import ReadMore from '../assets/ReadMore.png';
 import Proj1 from '../assets/proj1.jpg';
 import myways from '../assets/myways.png';
@@ -27,9 +26,9 @@ export default function Projects() {
  
       <div style={{marginLeft:'60px'}} className="gap-20 flex flex-col w-[90%] h-[100%] "> 
 {/* -----------------------------01-----------------------------01------------------------------------------01----------------------- */}
-        <div className='flex flex-col sm:flex-row  gap:10 sm:gap-30 w-full h-auto'>
+        <div className='flex flex-col sm:flex-row gap:10 sm:gap-30 w-full h-auto'>
           <motion.div
-              className="flex flex-col items-start gap-7 self-stretch mt-12 sm:h-[20rem] sm:w-[45%] w-[80%] h-[10rem] rounded-xl overflow-hidden"
+              className="flex flex-col items-start gap-7 self-stretch  sm:h-[20rem] sm:w-[45%] w-[80%] h-[10rem] rounded-xl overflow-hidden"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -38,7 +37,7 @@ export default function Projects() {
               <img src={myways} alt="Project 1"  className="rounded-xl w-full h-full transition-transform duration-500 hover:[transform:perspective(1000px)_rotateY(10deg)_rotateX(-10deg)]"/>
           </motion.div>
             <motion.div
-              className="flex flex-col  items-start sm:gap-7 self-stretch h-[100%] sm:w-[45%] w-[80%] rounded-xl overflow-hidden"
+              className="flex flex-col pt-4 pl-2 items-start sm:gap-7 self-stretch h-[100%] sm:w-[45%] w-[80%] rounded-xl overflow-hidden"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -62,7 +61,7 @@ export default function Projects() {
 {/* ----------------------------02---------------------------------------02---------------------------02------------------------------------ */}
           <div className='flex flex-col-reverse sm:flex-row w-full sm:gap-30'>
           <motion.div
-              className=" flex flex-col items-start sm:gap-7 self-stretch mt-12 h-[100%] sm:w-[45%] w-[80%] rounded-xl overflow-hidden"
+              className=" flex flex-col items-start sm:gap-7 pl-2 self-stretch mt-12 h-[100%] sm:w-[45%] w-[80%] rounded-xl overflow-hidden"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}

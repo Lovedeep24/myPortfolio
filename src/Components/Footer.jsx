@@ -3,7 +3,6 @@ import github from '../assets/github.png';
 import facebook from '../assets/facebook.png';
 import instagram from '../assets/instagram.png';
 import linkedin from '../assets/linkedin.png';
-import styles from '../Styles/footer.module.css'
 export default function Footer() {
   return (
     <>
