@@ -30,7 +30,7 @@ export default function Contact() {
     }
     else{
     try {
-        const response = await axios.post("http://localhost:7000/clients/req", {
+        const response = await axios.post("https://myportfolio-3-rokb.onrender.com/req", {
             email,
             name,
             subject,
