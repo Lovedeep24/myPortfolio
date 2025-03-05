@@ -36,7 +36,7 @@ export default function Skills() {
             My <span className="text-[#4061F7] text-[3rem] font-extrabold "> Skills</span>
           </p>
         </div>
-        <div style={{ marginTop:'100px',marginLeft: window.innerWidth < 640 ? '40px' : '100px',}} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 border-amber-500">
+        <div style={{ marginLeft: window.innerWidth < 640 ? '40px' : '100px',}} className=" mt-[100px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 border-amber-500">
           {skills.map((skill) => {
             return (
               <motion.div
@@ -48,7 +48,7 @@ export default function Skills() {
                 viewport={{ once: true, amount: 0.2 }}
               >
                 <div  className="group w-[8rem] h-[9rem] sm:w-[18rem] sm:h-[10rem]  p-6 flex flex-col justify-center items-center gap-8 rounded-xl bg-white relative overflow-hidden transition-all duration-500 hover:scale-105">
-                <img src={skill.icon} alt="skill"  className= " h-[45%] w-[80%] sm:h-[55%] sm:w[20%] transition-transform duration-500" />
+                <img src={skill.icon} alt="skill"  className= " h-[50%] w-[80%] sm:h-[70%] sm:w[20%] transition-transform duration-500" />
                 <p className=" text-black text-center text-xl font-semibold transition-colors duration-300 tracking-tight capitalize ">{skill.name}</p>
                 </div> 
               </motion.div>

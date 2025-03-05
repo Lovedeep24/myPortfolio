@@ -30,7 +30,7 @@ export default function Contact() {
     }
     else{
     try {
-        const response = await axios.post("http://localhost:4000/req", {
+        const response = await axios.post("http://localhost:7000/clients/req", {
             email,
             name,
             subject,
@@ -38,9 +38,7 @@ export default function Contact() {
         });
 
         if (response.status === 200) {
-            // alert("Request sent successfully");
-            toast.success("Got it Will get back to you shortly",{className: "text-red"})
-            // toast("This is a toast!")
+            toast.success("Got Your Request Will get back to you")
             setDescription("");
             setEmail("");
             setSubject("");
@@ -51,11 +49,11 @@ export default function Contact() {
         console.log("Error:", error);
         if(error.response)
         {
-            if (error.response.status === 404) {
-              toast.error("Something went wrong!",{className: "text-red"})
+            if (error.response.status === 500) {
+              toast.error("Something went wrong Request not Received!")
             } else {
                 // alert("All Fields are required");
-                toast.error("Something went wrong!",{className: "text-red"})
+                toast.error("Something went wrong!")
             }
         }
         
