@@ -12,10 +12,9 @@ export default function Footer() {
             </div>
             <div className= "w-[6rem] sm:w-auto">
                 <div className="flex gap-2 sm:gap-4">
-                    <a><img src={facebook} alt="facebook" /></a>
-                    <a><img src={instagram} alt="instagram" /></a>
+                    <a  href='https://www.instagram.com/lovedeep_bidhan?igsh=MTVkYnhyZnkwZHBncg%3D%3D&utm_source=qr'  target='_blank'><img src={instagram} alt="instagram" /></a>
                     <a href='https://www.linkedin.com/in/lovedeep024/' target='#'><img src={linkedin} alt="linkedin" /></a>
-                    <a href='https://github.com/Lovedeep24'><img src={github} alt="github" /></a>
+                    <a href='https://github.com/Lovedeep24' target='#'><img src={github} alt="github" /></a>
                 </div>           
             </div>
         </div>  

@@ -29,10 +29,10 @@ export default function Body1() {
                  </p>
      
                  <div className="flex justify-center gap-4 items-center ">
-                     <a><img src={facebook} alt="facebook" className="w-6 h-6 sm:w-6 sm:h-6" /></a>
-                     <a><img src={instagram} alt="instagram" className="w-6 h-6 sm:w-6 sm:h-6 "/></a>
-                     <a><img src={linkedin} alt="linkedin" className="w-6 h-6 sm:w-6 sm:h-6"/></a>
-                     <a><img src={github} alt="github" className="w-6 h-6 sm:w-6 sm:h-6"/></a>
+                     {/* <a><img src={facebook} alt="facebook" className="w-6 h-6 sm:w-6 sm:h-6" /></a> */}
+                     <a href='https://www.instagram.com/lovedeep_bidhan?igsh=MTVkYnhyZnkwZHBncg%3D%3D&utm_source=qr'  target='_blank'><img src={instagram} alt="instagram" className="w-6 h-6 sm:w-6 sm:h-6 "/></a>
+                     <a href='https://www.linkedin.com/in/lovedeep024/' target='_blank'><img src={linkedin} alt="linkedin" className="w-6 h-6 sm:w-6 sm:h-6"/></a>
+                     <a href='https://github.com/Lovedeep24'  target='_blank'><img src={github} alt="github" className="w-6 h-6 sm:w-6 sm:h-6"/></a>
                  </div>
                  <a href={CV} target='#' download="Cv.pdf" style={{marginTop: '10px'}}><button className="mt-3 bg-[#0B0B0B] w-[5rem] h-[1.25rem] sm:w-[9rem] sm:h-[2rem] flex-shrink-0 rounded-[3.125rem] border border-white text-white text-[.75rem] font-medium sm:text-xl leading-normal transition-all duration-300 ease-in-out hover:bg-white hover:text-black">Download CV</button></a>
             </div>
