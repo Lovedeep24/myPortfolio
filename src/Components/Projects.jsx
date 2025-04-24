@@ -65,7 +65,7 @@ export default function Projects() {
               <a href='' target="_blank" className='h-8 w-15'>
                 <img src={liveBtn} alt="Live" className="h-full w-full object-contain"/>
                 </a>
-                <a href='https://github.com/Lovedeep24/cipher-Schools-mcq-test-platform' target="_blank" className='h-8 w-8'>
+                <a href='https://github.com/Lovedeep24/Ticklytic.git' target="_blank" className='h-8 w-8'>
                 <img src={gitLogo} alt="Github" className="h-full w-full object-contain"/>
                 </a>
               </a>
@@ -164,7 +164,7 @@ export default function Projects() {
                 <a href='https://live-tracker-one.vercel.app/' target="_blank" className='h-8 w-15'>
                 <img src={liveBtn} alt="Live" className="h-full w-full object-contain"/>
                 </a>
-                <a href='https://github.com/Lovedeep24/Adventurush' target="_blank" className='h-8 w-8'>
+                <a href='https://github.com/Lovedeep24/crypto_weather.git' target="_blank" className='h-8 w-8'>
                 <img src={gitLogo} alt="Github" className="h-full w-full object-contain"/>
                 </a>
                 
