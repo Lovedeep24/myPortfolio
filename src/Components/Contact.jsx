@@ -8,6 +8,7 @@ export default function Contact() {
   const[name, setName] = useState("");  
   const[email, setEmail] = useState("");
   const[subject, setSubject] = useState("");
+  const[isloadindg, setisLoading] = useState(false);
   const[description, setDescription] = useState("");
   const slideInLeft = {
     hidden: { opacity: 0, x: -100 },
@@ -30,7 +31,9 @@ export default function Contact() {
     }
     else{
     try {
-        const response = await axios.post("https://myportfolio-3-rokb.onrender.com/clients/req", {
+      setisLoading(true);
+        // const response = await axios.post("https://myportfolio-3-rokb.onrender.com/clients/req", {
+          const response = await axios.post("http://localhost:4000/clients/req", {
             email,
             name,
             subject,
@@ -39,6 +42,7 @@ export default function Contact() {
 
         if (response.status === 200) {
             toast.success("Got Your Request Will get back to you")
+            setisLoading(false);
             setDescription("");
             setEmail("");
             setSubject("");
@@ -56,7 +60,7 @@ export default function Contact() {
                 toast.error("Something went wrong!")
             }
         }
-        
+        return setisLoading(false);
     }
   }
 };
@@ -72,12 +76,12 @@ export default function Contact() {
                 viewport={{ once: true, amount: 0.2 }}
                 variants={slideInLeft}
               >
-                    <form  onSubmit={handleSubmit} className='flex flex-col gap-5' >
-                    <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem]  items-center rounded-[1.25rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem] "placeholder="Your name" />
-                    <input value={email} onChange={(e) => setEmail(e.target.value)} type="email"  className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem] items-center rounded-[1.25rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem]" placeholder="Email*" />
-                    <input value={subject} onChange={(e) => setSubject(e.target.value)} type="text" className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem] items-center rounded-[1.25rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem]" placeholder="Subject*" />
-                    <textarea value={description} onChange={(e) => setDescription(e.target.value)} type="text" maxLength={200}  className="bg-[#0B0B0B] pt-3 pl-5 flex sm:w-[100%] w-[90%] h-[6rem] sm:h-[8.5rem] rounded-[1.25rem] border-1 border-white text-[#9B9B9B] text-base font-normal text-start"placeholder="How can i Help?" />
-                    <button type='submit' className="w-[40%] sm:w-[100%] h-[2.5rem] text-white font-bold flex-shrink-0 rounded-[3.125rem] bg-[#0B0B0B] border-1 border-white hover:text-black hover:bg-white">Send</button>
+                    <form  onSubmit={handleSubmit} className='flex flex-col gap-5 sm:items-center sm:justify-center' >
+                    <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem]  items-center rounded-[1rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem] "placeholder="Your name" />
+                    <input value={email} onChange={(e) => setEmail(e.target.value)} type="email"  className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem] items-center rounded-[1rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem]" placeholder="Email*" />
+                    <input value={subject} onChange={(e) => setSubject(e.target.value)} type="text" className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem] items-center rounded-[1rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem]" placeholder="Subject*" />
+                    <textarea value={description} onChange={(e) => setDescription(e.target.value)} type="text" maxLength={200}  className="bg-[#0B0B0B] pt-3 pl-5 flex sm:w-[100%] w-[90%] h-[6rem] sm:h-[8.5rem] rounded-[1rem] border-1 border-white text-[#9B9B9B] text-base font-normal text-start"placeholder="How can i Help?" />
+                    <button type='submit' className="w-[40%] sm:w-[50%] h-[2rem] sm:h-[3rem] text-white font-bold flex-shrink-0 rounded-[1.75rem] bg-[#0B0B0B] border-1 border-white hover:text-black hover:bg-white">{isloadindg ? "Sending..." : "Send"}</button>
                     </form>
                     </motion.div>
             {/* </div> */}

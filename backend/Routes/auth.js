@@ -7,7 +7,6 @@ const router = express.Router();
 
 router.get("/clients", clientsDataFetch );
 router.post("/clients/req", addClient);
-router.post("/add-project", addProject);
 
 
 module.exports = router;
