@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import vocaledge from '../assets/vocaledge.png';
+import intervuAI from '../assets/intervuAI.png';
 import strict from '../assets/strict.png';
 import crypto from '../assets/cryptolive.png';
 import ticklytic from '../assets/ticklytic.png';
@@ -54,20 +54,21 @@ export default function Projects() {
               <div className=' w-auto flex text-white gap-4'>
                 <p className='text-[#4061F7] w-auto whitespace-nowrap font-bold'>Tech Stack:</p>
                 <ul className='flex w-auto gap-2 text-white whitespace-nowrap '>
-                  <li>HTML</li>
-                  <li>CSS</li>
+                  <li>React</li>
+                  <li>Tailwind CSS</li>
                   <li>React</li>
                   <li>Node</li>
-                  <li>Express</li>
+                  <li>Cron job</li>
                 </ul>
               </div>
               <a className="flex w-auto h-auto gap-10 ">
-              <a href='' target="_blank" className='h-8 w-15'>
-                <img src={liveBtn} alt="Live" className="h-full w-full object-contain"/>
-                </a>
-                <a href='https://github.com/Lovedeep24/Ticklytic.git' target="_blank" className='h-8 w-8'>
+              <a href='https://github.com/Lovedeep24/Ticklytic.git' target="_blank" className='h-8 w-8'>
                 <img src={gitLogo} alt="Github" className="h-full w-full object-contain"/>
                 </a>
+              {/* <a href='' target="_blank" className='h-8 w-15'> */}
+                {/* <img src={liveBtn} alt="Live" className="h-full w-full object-contain"/> */}
+                {/* </a> */}
+                
               </a>
               </div>
             </motion.div>
@@ -84,18 +85,18 @@ export default function Projects() {
               variants={slideInLeft}
             >
               {/* <h1 className='sm:hidden'>01</h1> */}
-              <p className="text-white text-xl lg:text-2xl font-bold">Vocal Edge</p>
+              <p className="text-white text-xl lg:text-2xl font-bold">Intervu.ai</p>
               <div className='flex flex-col gap-7'>
               <p className="text-[#9B9B9B] text-base font-normal">
-              VocalEdge is an AI-powered voice-based test platform where users take spoken assessments with real-time evaluation. It ensures test integrity through screen sharing and live proctoring. Users respond verbally, and their answers are analyzed for accuracy and relevance. With an interactive and adaptive testing approach, VocalEdge enhances the assessment experience for various skill-based evaluations.
+              Intervu.ai is an AI-powered voice-based test platform where users take spoken assessments with real-time evaluation. It ensures test integrity through screen sharing and live proctoring. Users respond verbally, and their answers are analyzed for accuracy and relevance. With an interactive and adaptive testing approach, Intervu.ai enhances the assessment experience for various skill-based evaluations.
               </p>
               <div className='w-auto flex text-white gap-4'>
                 <p className='text-[#4061F7] w-auto whitespace-nowrap font-bold'>Tech Stack:</p>
                 <ul className='flex w-auto gap-2 text-white whitespace-nowrap'>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>React</li>
-                  <li>Node</li>
+                  <li>Nextjs</li>
+                  <li>Tailwind CSS</li>
+                  <li>Shandcn</li>
+                  <li>API's</li>
                   <li>Express</li>
                 </ul>
               </div>
@@ -123,7 +124,7 @@ export default function Projects() {
               viewport={{ once: true, amount: 0.2 }}
               variants={slideInRight}
             >
-              <img src={vocaledge} alt="Project 1"  className="rounded-xl w-full h-full transition-transform duration-500 hover:[transform:perspective(1000px)_rotateY(-10deg)_rotateX(-10deg)]"/>
+              <img src={intervuAI} alt="Project 1"  className="rounded-xl w-full h-full transition-transform duration-500 hover:[transform:perspective(1000px)_rotateY(-10deg)_rotateX(-10deg)]"/>
           </motion.div>
           </div>
 {/* ----------------------------02---------------------------------------02---------------------------02------------------------------------ */}
