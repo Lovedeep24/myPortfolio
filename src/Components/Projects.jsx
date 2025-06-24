@@ -47,13 +47,13 @@ export default function Projects() {
             >
               {/* <h1>03</h1> */}
               <p className="text-white text-2xl font-bold leading-10 tracking-tight">Ticklytic</p>
-              <div className='flex flex-col gap-7'>
-              <p className="text-[#9B9B9B] text-base font-normal">
+              <div className='flex flex-col gap-7 w-full'>
+              <p className="text-[#9B9B9B] text-base text-wrap font-normal">
               Ticklytic is an online MCQ test platform with a built-in proctoring system using the user's camera preview. It ensures secure assessments with real-time monitoring, authentication, and timers. Users receive test results via email, making it ideal for educational institutions and recruiters seeking a scalable and user-friendly testing solution.
               </p>
-              <div className=' w-auto flex text-white gap-4'>
+              <div className=' w-full flex text-white gap-4'>
                 <p className='text-[#4061F7] w-auto whitespace-nowrap font-bold'>Tech Stack:</p>
-                <ul className='flex w-auto gap-2 text-white whitespace-nowrap '>
+                <ul className='flex w-full text-wrap border-2 gap-2 lg:gap-4 text-white '>
                   <li>React</li>
                   <li>Tailwind CSS</li>
                   <li>React</li>
@@ -97,7 +97,9 @@ export default function Projects() {
                   <li>Tailwind CSS</li>
                   <li>Shandcn</li>
                   <li>API's</li>
-                  <li>Express</li>
+                  <li>Nodejs</li>
+                  <li>TTS</li>
+                  <li>STT</li>
                 </ul>
               </div>
               <a className="flex w-full h-auto md:gap-10 gap-5 ">
@@ -124,7 +126,7 @@ export default function Projects() {
               viewport={{ once: true, amount: 0.2 }}
               variants={slideInRight}
             >
-              <img src={intervuAI} alt="Project 1"  className="rounded-xl w-full h-full transition-transform duration-500 hover:[transform:perspective(1000px)_rotateY(-10deg)_rotateX(-10deg)]"/>
+              <img src={intervuAI} alt="Project 1"  className="rounded-xl  w-full h-full transition-transform duration-500 hover:[transform:perspective(1000px)_rotateY(-10deg)_rotateX(-10deg)]"/>
           </motion.div>
           </div>
 {/* ----------------------------02---------------------------------------02---------------------------02------------------------------------ */}
@@ -148,12 +150,12 @@ export default function Projects() {
               {/* <h1>02</h1> */}
               <p className="text-white text-2xl font-bold  leading-10 tracking-tight">CryptoLive</p>
               <div className='flex flex-col gap-7'>
-              <p className="text-[#9B9B9B] text-base font-normal">
+              <p className="text-[#9B9B9B] text-base  font-normal">
               CryptoLive is a real-time dashboard that allows users to track live cryptocurrency prices, stay updated with the latest crypto news, and check current weather conditions—all in one place. With a clean and responsive interface, it offers seamless navigation and real-time updates using live data sources, ensuring users have accurate and up-to-date information at their fingertips for smarter decision-making.
               </p>
               <div className='w-auto flex text-white gap-4'>
                 <p className='text-[#4061F7] w-auto whitespace-nowrap font-bold'>Tech Stack:</p>
-                <ul className='flex w-auto gap-2 text-white whitespace-nowrap'>
+                <ul className='flex w-auto flex-wrap gap-2 text-white whitespace-nowrap'>
                   <li>Next js</li>
                   <li>React</li>
                   <li>Tailwind css</li>
