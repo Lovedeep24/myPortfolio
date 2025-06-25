@@ -94,11 +94,11 @@ export default function Contact() {
              >   
             <div className='ml-17 flex flex-col gap-3 mt-4' >
                 <h1  className="text-white text-5xl font-extrabold">Get in Touch</h1>
-                <p className="text-[#9B9B9B] mt-[10%] text-base font-normal leading-[1.5rem] tracking-[0.02rem]">I seek to push the limits of creativity to create high-engaging,
+                <p className="text-[#9B9B9B] mt-[10%] text-lg font-normal leading-[1.5rem] tracking-[0.02rem]">I seek to push the limits of creativity to create high-engaging,
                  user-friendly, and memorable interactive experiences.
                  </p>
-                 <div className='flex flex-col gap-2 border-2 w-auto'>
-                 <p className="text-white mt-[6%] text-[1.75rem] font-semibold border-2 ">lovedeep24253@gmail.com</p>
+                 <div className='flex flex-col gap-2  w-auto'>
+                 <p className="text-white mt-[6%] text-[1.75rem] font-semibold ">lovedeep24253@gmail.com</p>
                  <p className="text-white text-[1.75rem] font-semibold leading-[2rem] tracking-[-0.035rem]">8295035820</p>  
                  </div>
             </div>

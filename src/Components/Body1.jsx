@@ -10,9 +10,9 @@ import CV from '../assets/CV.pdf';
 export default function Body1() {
   return (
     <>
-     <div className="w-full bg-black h-auto ">
-        <div className="flex flex-col justify-centre items-center bg-black">
-            <div className=" overflow-hidden mx-auto h-58 w-60 sm:w-48 sm:h-48 lg:w-60 lg:h-60 flex justify-center items-center  rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,_#FFF_10%,_rgba(67,_67,_67,_0.00)_100%)]">
+     <div className="w-full bg-black flex items-center justify-center  h-[100vh] ">
+        <div className="flex flex-col gap-y-10 justify-centre items-center bg-black">
+            <div className=" overflow-hidden mx-auto  h-58 w-60 sm:w-48 sm:h-48 lg:w-60 lg:h-60 flex justify-center items-center  rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,_#FFF_10%,_rgba(67,_67,_67,_0.00)_100%)]">
                 <div className="p-4 h-50 w-50">
                      <img src={portfilioImg} alt="portfolio" className="w-full h-full object-contain"/>
                 </div>
@@ -21,7 +21,7 @@ export default function Body1() {
                  <p className="text-white text-2xl sm:text-3xl font-medium">
                   {'< Hello ! >'}
                   </p>
-                 <p className=" text-white text-3xl sm:text-5xl md:text-6xl font-medium leading-[3.5rem] ">
+                 <p className=" text-white text-3xl sm:text-5xl md:text-6xl font-medium ">
                  I’am <span className="inline-block text-[#4061F7]  text-3xl sm:text-5xl md:text-6xl font-extrabold bg-contain bg-center bg-no-repeat"  style={{ backgroundImage: `url(${Starbg})` }}>Lovedeep Bidhan</span>,<br></br> Full-stack web developer.
                  </p>
                  <p className="w-full sm:w-[64%] text-[#9B9B9B] text-center sm:text-lg text-[1rem] font-light leading-relaxed">

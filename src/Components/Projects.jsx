@@ -47,13 +47,13 @@ export default function Projects() {
             >
               {/* <h1>03</h1> */}
               <p className="text-white text-2xl font-bold leading-10 tracking-tight">Ticklytic</p>
-              <div className='flex flex-col gap-7 w-full'>
-              <p className="text-[#9B9B9B] text-base text-wrap font-normal">
+              <div className='flex flex-col gap-7 w-full '>
+              <p className="text-[#9B9B9B] text-lg text-wrap font-normal">
               Ticklytic is an online MCQ test platform with a built-in proctoring system using the user's camera preview. It ensures secure assessments with real-time monitoring, authentication, and timers. Users receive test results via email, making it ideal for educational institutions and recruiters seeking a scalable and user-friendly testing solution.
               </p>
-              <div className=' w-full flex text-white gap-4'>
+              <div className=' w-full flex flex-wrap text-white gap-4'>
                 <p className='text-[#4061F7] w-auto whitespace-nowrap font-bold'>Tech Stack:</p>
-                <ul className='flex w-full text-wrap border-2 gap-2 lg:gap-4 text-white '>
+                <ul className='flex w-full gap-4 flex-wrap text-white '>
                   <li>React</li>
                   <li>Tailwind CSS</li>
                   <li>React</li>
@@ -65,10 +65,6 @@ export default function Projects() {
               <a href='https://github.com/Lovedeep24/Ticklytic.git' target="_blank" className='h-8 w-8'>
                 <img src={gitLogo} alt="Github" className="h-full w-full object-contain"/>
                 </a>
-              {/* <a href='' target="_blank" className='h-8 w-15'> */}
-                {/* <img src={liveBtn} alt="Live" className="h-full w-full object-contain"/> */}
-                {/* </a> */}
-                
               </a>
               </div>
             </motion.div>
@@ -76,33 +72,33 @@ export default function Projects() {
 
 
 {/* /////////////////////////////////////////-----------------------------------------/ */}
-        <div className='flex flex-col-reverse sm:flex-row gap:10 sm:gap-30 w-full h-auto'>
+        <div className='flex flex-col-reverse sm:flex-row lg:gap:10 sm:gap-30 w-full h-auto'>
             <motion.div
-              className="flex flex-col pt-4 pl-2 items-start sm:gap-7 self-stretch h-[100%] sm:w-[45%] w-[80%] rounded-xl overflow-hidden"
+              className="flex flex-col pt-4 pl-2 items-start sm:gap-7 self-stretch h-[100%] sm:w-[45%] w-[80%] rounded-xl"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={slideInLeft}
             >
-              {/* <h1 className='sm:hidden'>01</h1> */}
+       
               <p className="text-white text-xl lg:text-2xl font-bold">Intervu.ai</p>
-              <div className='flex flex-col gap-7'>
-              <p className="text-[#9B9B9B] text-base font-normal">
+          <div className='flex flex-col gap-7 w-full'>
+             <p className="text-[#9B9B9B] text-lg  flex font-normal">
               Intervu.ai is an AI-powered voice-based test platform where users take spoken assessments with real-time evaluation. It ensures test integrity through screen sharing and live proctoring. Users respond verbally, and their answers are analyzed for accuracy and relevance. With an interactive and adaptive testing approach, Intervu.ai enhances the assessment experience for various skill-based evaluations.
               </p>
-              <div className='w-auto flex text-white gap-4'>
-                <p className='text-[#4061F7] w-auto whitespace-nowrap font-bold'>Tech Stack:</p>
-                <ul className='flex w-auto gap-2 text-white whitespace-nowrap'>
+              <div className='text-white gap-4 flex-wrap flex w-full'>
+                <p className='text-[#4061F7] whitespace-nowrap font-bold'>Tech Stack:</p>
+                <ul className='flex flex-wrap gap-2 text-white'>
                   <li>Nextjs</li>
                   <li>Tailwind CSS</li>
-                  <li>Shandcn</li>
+                  <li>Shadcn</li>
                   <li>API's</li>
                   <li>Nodejs</li>
                   <li>TTS</li>
                   <li>STT</li>
                 </ul>
               </div>
-              <a className="flex w-full h-auto md:gap-10 gap-5 ">
+              <div className="flex w-full h-auto sm:gap-5 lg:gap-10 ">
                 <a href='https://intervu-ai-beige.vercel.app/' target="_blank" className='h-8 w-15'>
                 <img src={liveBtn} alt="Live" className="h-full w-full object-contain"/>
                 </a>  
@@ -112,10 +108,10 @@ export default function Projects() {
                   <span className='text-white pt-1'>Desktop Only</span> 
                 </div>
           
-                <a href='https://github.com/Lovedeep24/intervu.ai.git' target="_blank" className='h-8 w-8'>
+                <a href='https://github.com/Lovedeep24/intervu.ai.git' target="_blank" className='h-8 w-8 '>
                 <img src={gitLogo} alt="Github" className="h-full w-full object-contain"/>
                 </a>
-              </a>
+              </div>
               </div>
               
             </motion.div>
@@ -141,7 +137,7 @@ export default function Projects() {
               <img src={crypto} alt="Project 2" className="rounded-xl w-full h-full transition-transform duration-500 hover:[transform:perspective(1000px)_rotateY(10deg)_rotateX(-10deg)]"/>
             </motion.div>
           <motion.div
-              className=" flex flex-col items-start sm:gap-7 pl-2 self-stretch mt-12 h-[100%] sm:w-[45%] w-[80%] rounded-xl overflow-hidden"
+              className=" flex flex-col items-start sm:gap-7 pl-2 self-stretch mt-12 h-[100%] sm:w-[45%] w-[80%] rounded-xl "
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -149,13 +145,13 @@ export default function Projects() {
             >
               {/* <h1>02</h1> */}
               <p className="text-white text-2xl font-bold  leading-10 tracking-tight">CryptoLive</p>
-              <div className='flex flex-col gap-7'>
-              <p className="text-[#9B9B9B] text-base  font-normal">
+              <div className='flex flex-col gap-7 w-full'>
+              <p className="text-[#9B9B9B] text-lg text-wrap font-normal">
               CryptoLive is a real-time dashboard that allows users to track live cryptocurrency prices, stay updated with the latest crypto news, and check current weather conditions—all in one place. With a clean and responsive interface, it offers seamless navigation and real-time updates using live data sources, ensuring users have accurate and up-to-date information at their fingertips for smarter decision-making.
               </p>
-              <div className='w-auto flex text-white gap-4'>
+              <div className='w-auto flex flex-wrap text-white gap-4'>
                 <p className='text-[#4061F7] w-auto whitespace-nowrap font-bold'>Tech Stack:</p>
-                <ul className='flex w-auto flex-wrap gap-2 text-white whitespace-nowrap'>
+                <ul className='flex w-auto  gap-2 text-white flex-wrap'>
                   <li>Next js</li>
                   <li>React</li>
                   <li>Tailwind css</li>
