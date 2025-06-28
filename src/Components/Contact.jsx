@@ -8,7 +8,7 @@ export default function Contact() {
   const[name, setName] = useState("");  
   const[email, setEmail] = useState("");
   const[subject, setSubject] = useState("");
-  const[isloadindg, setisLoading] = useState(false);
+  const[isloading, setisLoading] = useState(false);
   const[description, setDescription] = useState("");
   const slideInLeft = {
     hidden: { opacity: 0, x: -100 },
@@ -28,12 +28,13 @@ export default function Contact() {
     else if(!subject)
     {
         toast.error("Subject Required!")
+        return;
     }
     else{
     try {
       setisLoading(true);
         const response = await axios.post("https://myportfolio-4-aidp.onrender.com/clients/req", {
-          // const response = await axios.post("http://localhost:4000/clients/req", {
+          // const response = await axios.post("http://localhost:7000/clients/req", {
             email,
             name,
             subject,
@@ -41,7 +42,7 @@ export default function Contact() {
         });
 
         if (response.status === 200) {
-            toast.success("Got Your Request Will get back to you")
+            toast.success("Got Your Request Will get back to you soon")
             setisLoading(false);
             setDescription("");
             setEmail("");
@@ -54,7 +55,7 @@ export default function Contact() {
         if(error.response)
         {
             if (error.response.status === 500) {
-              toast.error("Something went wrong Request not Received!")
+              toast.error("Something went wrong Request not Received! Try again")
             } else {
                 // alert("All Fields are required");
                 toast.error("Something went wrong!")
@@ -81,7 +82,7 @@ export default function Contact() {
                     <input value={email} onChange={(e) => setEmail(e.target.value)} type="email"  className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem] items-center rounded-[1rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem]" placeholder="Email*" />
                     <input value={subject} onChange={(e) => setSubject(e.target.value)} type="text" className="bg-[#0B0B0B] flex w-[90%] pl-5 sm:w-[100%] h-[2rem] sm:h-[3.5rem] items-center rounded-[1rem] border-1 border-white text-[#9B9B9B] text-base font-normal leading-[1.25rem]" placeholder="Subject*" />
                     <textarea value={description} onChange={(e) => setDescription(e.target.value)} type="text" maxLength={200}  className="bg-[#0B0B0B] pt-3 pl-5 flex sm:w-[100%] w-[90%] h-[6rem] sm:h-[8.5rem] rounded-[1rem] border-1 border-white text-[#9B9B9B] text-base font-normal text-start"placeholder="How can i Help?" />
-                    <button type='submit' className="w-[40%] sm:w-[50%] h-[2rem] sm:h-[3rem] text-white font-bold flex-shrink-0 rounded-[1.75rem] bg-[#0B0B0B] border-1 border-white hover:text-black hover:bg-white">{isloadindg ? "Sending..." : "Send"}</button>
+                    <button disabled={isloading} type='submit' className="w-[40%] sm:w-[50%] h-[2rem] sm:h-[3rem] text-white font-bold flex-shrink-0 rounded-[1.75rem] bg-[#0B0B0B] border-1 border-white hover:text-black hover:bg-white ">{isloading ? "Sending..." : "Send"}</button>
                     </form>
                     </motion.div>
             {/* </div> */}

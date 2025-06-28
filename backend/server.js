@@ -11,15 +11,16 @@ app.use(cors());
 app.use(express.json());
 
 
-const PORT=4000;
-
-app.listen(PORT,()=>{
-    console.log(`Server Started`);
-    connectToMongoDb()
+const PORT = process.env.PORT || 4000;
+connectToMongoDb()
   .then(() => {
-      console.log('Connected to MongoDB');
-
+    console.log('Connected to MongoDB');
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`Server running on port ${PORT}`);
+    });
   })
-})
+  .catch((err) => {
+    console.error('Failed to connect to MongoDB:', err);
+  });
 
 app.use("",clientRoutes);
